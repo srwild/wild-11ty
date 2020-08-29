@@ -6,9 +6,9 @@ There are many ways to setup an Eleventy site. It’s not opinionated and it’s
 
 ## Getting Started
 
-`git clone`
+`git clone https://github.com/srwild/wild-11ty.git`
 
-`cd `
+`cd wild-11ty`
 
 `npm install` to get everything installed
 
