@@ -1,0 +1,16 @@
+# The usual
+.DS_Store
+npm-debug.log
+node_modules
+
+# I've heard conflicting opions if this should be ignored
+package-lock.json
+
+# Ignore Compiled Site
+_site
+
+# Local Netlify folder
+.netlify
+
+# Ignore compiled Sass
+src/assets/css
