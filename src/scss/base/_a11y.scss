@@ -1,0 +1,21 @@
+// Vertically hide any element (mostly text) accessibly. Support includes IE9+.
+// From Sara Soueidan on Applied Accessibility at SmashingConf NYC 2019
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// I don't recall where I found this. I'm a bit sensitive to motion so I appreciate it when others do this.
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+  }
+}

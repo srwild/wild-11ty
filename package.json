@@ -1,0 +1,28 @@
+{
+  "name": "wild-11ty",
+  "version": "1.0.0",
+  "description": "Basic skeleton for a site built with Eleventy, Sass, and deployed by Netlify",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass src/scss:src/assets/css --style=compressed --no-source-map",
+    "sass:serve": "sass src/scss:src/assets/css --color --embed-sources --watch",
+    "eleventy:serve": "ELEVENTY_ENV=development eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx eleventy --dryrun",
+    "performance": "DEBUG=Eleventy:Benchmark* eleventy",
+    "clean": "rm -rf src/assets/css _site",
+    "start": "npm run clean && npm run sass:build && concurrently \"npm run eleventy:serve\" \"npm run sass:serve\"",
+    "build": "npm run sass:build && eleventy",
+    "build:dev": "sass src/scss:src/assets/css --color --embed-sources && eleventy"
+  },
+  "keywords": [
+    "Eleventy",
+    "Sass"
+  ],
+  "author": "S.R. Wild",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "concurrently": "^5.3.0",
+    "sass": "^1.26.10"
+  }
+}
