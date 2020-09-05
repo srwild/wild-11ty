@@ -4,20 +4,16 @@
   "description": "Basic skeleton for a site built with Eleventy, Sass, and deployed by Netlify",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass src/scss:src/assets/css --style=compressed --no-source-map",
-    "sass:serve": "sass src/scss:src/assets/css --color --embed-sources --watch",
+    "sass:build": "sass src/scss:_site/assets/css --style=compressed --no-source-map",
+    "sass:serve": "sass src/scss:_site/assets/css --color --embed-sources --watch",
     "eleventy:serve": "ELEVENTY_ENV=development eleventy --serve",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun",
     "performance": "DEBUG=Eleventy:Benchmark* eleventy",
-    "clean": "rm -rf src/assets/css _site",
-    "start": "npm run clean && npm run sass:build && concurrently \"npm run eleventy:serve\" \"npm run sass:serve\"",
-    "build": "npm run sass:build && eleventy",
-    "build:dev": "sass src/scss:src/assets/css --color --embed-sources && eleventy"
+    "clean": "rm -rf _site",
+    "start": "npm run clean && concurrently \"npm run eleventy:serve\" \"npm run sass:serve\"",
+    "build": "npm run sass:build && eleventy"
   },
-  "keywords": [
-    "Eleventy",
-    "Sass"
-  ],
+  "keywords": [],
   "author": "S.R. Wild",
   "license": "ISC",
   "devDependencies": {

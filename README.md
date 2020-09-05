@@ -37,5 +37,3 @@ NOTE: Sass is kind of wonky. The sourcemaps don’t work (paths are wrong). In t
 `npm run build` builds your awesome site. This is what Netlify will use when they* build your site. It’s set in `netlify.toml`
 
 *I always picture someone at Netlify getting a message from a pneumatic tube that I want to deploy a site. A bell rings. That message gets handed off to many people. Then my code goes down an assembly line.
-
-I don’t expect anyone will use or read this, but if you have any questions or comments, please file an issue, email me, DM me, or any other text based communication. I do not like using the phone.
