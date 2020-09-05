@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  // Doesn't use .gitignore, so it won't ignore CSS changes
+  // Doesn't use .gitignore
   eleventyConfig.setUseGitIgnore(false);
 
   // Move without doing anything
