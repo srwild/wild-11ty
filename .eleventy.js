@@ -9,6 +9,11 @@ module.exports = function (eleventyConfig) {
   // Shhhhh eleventy
   eleventyConfig.setQuietMode(true);
 
+  // BrowserSync Options
+  eleventyConfig.setBrowserSyncConfig({
+    files: './src/scss/**/*', // Watch for scss changes and reload
+  });
+
   // Directory settings
   return {
     dir: {
