@@ -19,6 +19,6 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-canary.18",
     "concurrently": "^7.5.0",
-    "sass": "^1.26.10"
+    "sass": "^1.56.1"
   }
 }
