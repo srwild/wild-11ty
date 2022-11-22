@@ -1,3 +1,5 @@
+require('dotenv').config('./.env');
+
 module.exports = function (eleventyConfig) {
 
   // Move without doing anything
