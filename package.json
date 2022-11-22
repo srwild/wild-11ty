@@ -3,15 +3,23 @@
   "version": "0.0.2",
   "description": "Basic skeleton for a site built with Eleventy, Sass, and deployed by Netlify",
   "main": "index.js",
+  "config": {
+    "css_in": "./src/scss/style.scss",
+    "css_out": "./_site/css/style.css",
+    "js_in": "./src/js/app.js",
+    "js_out": "./_site/js/app.js"
+  },
   "scripts": {
-    "sass:build": "sass src/scss:_site/css --style=compressed --no-source-map",
-    "sass:serve": "sass src/scss:_site/css --color --embed-sources --watch",
+    "sass:serve": "sass --watch $npm_package_config_css_in $npm_package_config_css_out",
+    "sass:build": "sass $npm_package_config_css_in $npm_package_config_css_out --style=compressed --no-source-map",
+    "js:serve": "esbuild $npm_package_config_js_in --outfile=$npm_package_config_js_out --bundle --watch",
+    "js:build": "esbuild $npm_package_config_js_in --outfile=$npm_package_config_js_out --bundle --minify",
     "eleventy:serve": "ELEVENTY_ENV=development eleventy --serve",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun",
     "performance": "DEBUG=Eleventy:Benchmark* eleventy",
     "clean": "rm -rf _site",
-    "start": "npm run clean && concurrently \"npm run eleventy:serve\" \"npm run sass:serve\"",
-    "build": "npm run sass:build && eleventy"
+    "start": "npm run clean && concurrently \"npm run eleventy:serve\" \"npm run sass:serve\" \"npm run js:serve\"",
+    "build": "npm run sass:build && npm run js:build && eleventy"
   },
   "keywords": [],
   "author": "S.R. Wild",
@@ -19,6 +27,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-canary.18",
     "concurrently": "^7.5.0",
+    "esbuild": "^0.15.15",
     "sass": "^1.56.1"
   }
 }
