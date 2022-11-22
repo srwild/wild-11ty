@@ -4,8 +4,8 @@
   "description": "Basic skeleton for a site built with Eleventy, Sass, and deployed by Netlify",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass src/scss:_site/assets/css --style=compressed --no-source-map",
-    "sass:serve": "sass src/scss:_site/assets/css --color --embed-sources --watch",
+    "sass:build": "sass src/scss:_site/css --style=compressed --no-source-map",
+    "sass:serve": "sass src/scss:_site/css --color --embed-sources --watch",
     "eleventy:serve": "ELEVENTY_ENV=development eleventy --serve",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun",
     "performance": "DEBUG=Eleventy:Benchmark* eleventy",
