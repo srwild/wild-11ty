@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
   // Move without doing anything
   eleventyConfig.addPassthroughCopy('./src/images/');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy({ './src/favicons/*': '/' });
 
   // Shhhhh eleventy
   eleventyConfig.setQuietMode(true);
