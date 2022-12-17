@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setServerPassthroughCopyBehavior('copy');
 
   // Watch for Changes
-  eleventyConfig.addWatchTarget('./src/scss/');
+  eleventyConfig.addWatchTarget('./src/css/**/*');
   eleventyConfig.addWatchTarget('./src/js/**/*');
   eleventyConfig.addWatchTarget('./src/images/**/*');
 
