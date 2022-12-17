@@ -11,11 +11,17 @@
   width: 1px;
 }
 
-// I don't recall where I found this. I'm a bit sensitive to motion so I appreciate it when others do this.
+// Remove all animations and transitions for people that prefer not to see them
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.001s !important;
-    transition-duration: 0.001s !important;
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

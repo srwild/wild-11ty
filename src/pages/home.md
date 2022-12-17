@@ -1,5 +1,6 @@
 ---
 layout: default.layout
+title: Home
 permalink: /
 ---
 
